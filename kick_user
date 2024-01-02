@@ -18,7 +18,7 @@ def kick_user(update, context):
         context.bot.kick_chat_member(update.message.chat_id, user_to_kick.id)
         update.message.reply_text(f'{user_to_kick.first_name} исключен из чата.')
     else:
-        update.message.reply_text('У вас нет прав для этой команды.')
+        update.message.reply_text('У вас нет прав для команды.')
 
 def main():
     updater = Updater(TOKEN, use_context=True)
